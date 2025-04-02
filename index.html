@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nireesha Addi - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar transition">
+        <div class="logo transition">Nireesha Addi</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-btn transition">Home</a></li>
+            <li><a href="#projects" class="nav-btn transition">Projects</a></li>
+            <li><a href="#skills" class="nav-btn transition">Skills</a></li>
+            <li><a href="#contact" class="nav-btn transition">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero section-transition">
+        <div class="hero-content">
+            <div class="bio-container transition">
+                <div class="bio-text transition">
+                    <h1>Nireesha Addi</h1>
+                    <p class="title transition">Aspiring Full Stack Developer</p>
+                    <p class="slogan transition">Crafting Secure, Scalable Solutions with Passion</p>
+                    <p class="bio transition">I’m a dedicated full stack development enthusiast focused on building secure, user-centric tech solutions. I conceptualized and developed SecureCloud, a file-sharing platform, leveraging AI assistance. My journey includes a standout pitch at a local hackathon and ongoing training in "Full Stack Web Development with Python and JavaScript," targeting Python and Flask certifications by mid-2025.</p>
+                    <a href="#projects" class="btn transition">Explore My Work</a>
+                </div>
+                <div class="bio-photo transition">
+                    <img src="./profile/my_profile.jpg" alt="Nireesha Addi" class="profile-img transition">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section section-transition">
+        <h2 class="transition">Projects</h2>
+        <div class="project-container">
+            <div class="project-card transition">
+                <h3 class="transition">SecureCloud</h3>
+                <p class="transition">A robust web application for encrypted file storage and sharing, featuring AES encryption, user authentication, and token-based access.</p>
+                <div class="screenshot-gallery">
+                    <div class="screenshot-item transition" data-content="Dashboard: Centralized hub for file management and user insights.">
+                        <img src="./screenshots/dashboard.png.jpg" alt="Dashboard" class="screenshot">
+                    </div>
+                    <div class="screenshot-item transition" data-content="Upload Page: Secure file uploads with real-time encryption.">
+                        <img src="./screenshots/upload.png.jpg" alt="Upload Page" class="screenshot">
+                    </div>
+                    <div class="screenshot-item transition" data-content="Search Page: Efficient keyword-based file retrieval.">
+                        <img src="./screenshots/search.png.jpg" alt="Search Page" class="screenshot">
+                    </div>
+                    <div class="screenshot-item transition" data-content="Download Page: Token-secured file downloads via email links.">
+                        <img src="./screenshots/download.png.jpg" alt="Download Page" class="screenshot">
+                    </div>
+                </div>
+                <div class="screenshot-content transition" id="screenshot-content">
+                    <p id="content-text">Select a screenshot to view details.</p>
+                    <img src="" alt="Preview" class="preview-img" id="preview-img">
+                </div>
+                <a href="https://github.com/CodeCrafter0521/secureCloud.git" class="btn transition">GitHub</a>
+                <p class="transition">Live Demo: Available upon request</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section section-transition">
+        <h2 class="transition">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item transition"><span class="skill-name">Project Ideation</span><div class="progress-bar" data-progress="80"></div></div>
+            <div class="skill-item transition"><span class="skill-name">Requirements Gathering</span><div class="progress-bar" data-progress="80"></div></div>
+            <div class="skill-item transition"><span class="skill-name">Quality Assurance</span><div class="progress-bar" data-progress="60"></div></div>
+            <div class="skill-item transition"><span class="skill-name">Full Stack Concepts</span><div class="progress-bar" data-progress="50"></div></div>
+            <div class="skill-item transition"><span class="skill-name">HTML</span><div class="progress-bar" data-progress="60"></div></div>
+            <div class="skill-item transition"><span class="skill-name">Python</span><div class="progress-bar" data-progress="30"></div></div>
+            <div class="skill-item transition"><span class="skill-name">Flask</span><div class="progress-bar" data-progress="20"></div></div>
+            <div class="skill-item transition"><span class="skill-name">PostgreSQL</span><div class="progress-bar" data-progress="20"></div></div>
+            <div class="skill-item transition"><span class="skill-name">CSS</span><div class="progress-bar" data-progress="40"></div></div>
+            <div class="skill-item transition"><span class="skill-name">JavaScript</span><div class="progress-bar" data-progress="30"></div></div>
+            <div class="skill-item transition"><span class="skill-name">Version Control (Git)</span><div class="progress-bar" data-progress="30"></div></div>
+            <div class="skill-item transition"><span class="skill-name">UI/UX Design Basics</span><div class="progress-bar" data-progress="40"></div></div>
+            <div class="skill-item transition"><span class="skill-name">Problem-Solving</span><div class="progress-bar" data-progress="80"></div></div>
+            <div class="skill-item transition"><span class="skill-name">Communication</span><div class="progress-bar" data-progress="80"></div></div>
+            <div class="skill-item transition"><span class="skill-name">Time Management</span><div class="progress-bar" data-progress="80"></div></div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section-transition">
+        <h2 class="transition">Contact Me</h2>
+        <p class="transition">Email: <a href="mailto:nireeshaaddi0216@gmail.com">nireeshaaddi0216@gmail.com</a></p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/nireesha-addi-a74a3b30b" class="social-icon transition">LinkedIn</a>
+            <a href="https://github.com/CodeCrafter0521" class="social-icon transition">GitHub</a>
+            <a href="https://unstop.com/u/NireeshaAddi" class="social-icon transition">Unstop</a>
+        </div>
+        <form class="contact-form transition">
+            <input type="text" placeholder="Name" required class="transition">
+            <input type="email" placeholder="Email" required class="transition">
+            <textarea placeholder="Message" required class="transition"></textarea>
+            <button type="submit" class="btn transition">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="transition">
+        <p>© 2025 Nireesha Addi. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
