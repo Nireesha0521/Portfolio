@@ -8,26 +8,28 @@ document.querySelectorAll('.nav-btn').forEach(anchor => {
 
 // Screenshot Interaction
 const screenshotItems = document.querySelectorAll('.screenshot-item');
-const screenshotContent = document.getElementById('screenshot-content');
-const contentText = document.getElementById('content-text');
-const previewImg = document.getElementById('preview-img');
 
 screenshotItems.forEach(item => {
     const img = item.querySelector('.screenshot');
+    const content = item.closest('.project-card').querySelector('.screenshot-content');
+    const contentText = content.querySelector('p');
+    const previewImg = content.querySelector('.preview-img');
+
     item.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
-        screenshotItems.forEach(i => i.classList.remove('active'));
-        screenshotContent.classList.remove('active');
+        // Reset all items in the same project card
+        item.closest('.project-card').querySelectorAll('.screenshot-item').forEach(i => i.classList.remove('active'));
+        content.classList.remove('active');
         previewImg.style.display = 'none';
 
         if (!isActive) {
             item.classList.add('active');
-            screenshotContent.classList.add('active');
+            content.classList.add('active');
             contentText.textContent = item.getAttribute('data-content') || 'No description available.';
             if (img && img.src) {
                 previewImg.src = img.src;
                 previewImg.style.display = 'block';
-                console.log('Previewing:', img.src); // Debug log
+                console.log('Previewing:', img.src);
             } else {
                 console.error('Image source not found for:', item);
             }
@@ -61,18 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Stop observing once visible
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.2 // Trigger when 20% of the section is visible
+        threshold: 0.2
     });
 
     sections.forEach(section => {
         observer.observe(section);
     });
 
-    // Ensure initial visibility of Home section if already in view
     const homeSection = document.getElementById('home');
     if (homeSection.getBoundingClientRect().top < window.innerHeight) {
         homeSection.classList.add('visible');
